@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="oLB-1p-qTF">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="eor-ep-Zqb">
+            <objects>
+                <viewController id="oLB-1p-qTF" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="I1a-XQ-zOZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="XLf-rg-63Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8sT-2n-g2m">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xwK-Ij-SKQ">
+                                <rect key="frame" x="117" y="318" width="140" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="W7R-ly-012"/>
+                                </constraints>
+                                <state key="normal" title="Play"/>
+                                <connections>
+                                    <segue destination="BV1-FR-VrT" kind="show" id="bOR-Bx-TAn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xwK-Ij-SKQ" firstAttribute="centerY" secondItem="8sT-2n-g2m" secondAttribute="centerY" id="ejz-Fm-TgS"/>
+                            <constraint firstItem="xwK-Ij-SKQ" firstAttribute="centerX" secondItem="8sT-2n-g2m" secondAttribute="centerX" id="tnM-Th-69t"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WKm-0a-fHA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-854" y="43"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="Breakout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8aa-yV-Osq"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHh-Mt-9TT"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKk-82-YzA">
+                                <rect key="frame" x="164" y="603" width="46" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="46" id="8gu-GS-wSB"/>
+                                </constraints>
+                                <state key="normal" title="Retry"/>
+                                <connections>
+                                    <segue destination="oLB-1p-qTF" kind="show" id="vua-sa-bAx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="qHh-Mt-9TT" firstAttribute="top" secondItem="PKk-82-YzA" secondAttribute="bottom" constant="33" id="8Pc-r9-1JT"/>
+                            <constraint firstItem="PKk-82-YzA" firstAttribute="top" secondItem="8aa-yV-Osq" secondAttribute="bottom" constant="583" id="Oxi-Y6-zDq"/>
+                            <constraint firstItem="PKk-82-YzA" firstAttribute="centerX" secondItem="3se-qz-xqx" secondAttribute="centerX" id="zww-4f-gW9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.59999999999999" y="42.728635682158924"/>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="3WX-Cc-Rus">
+            <objects>
+                <viewController id="fSr-MV-UHZ" customClass="GameViewController" customModule="Breakout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9sq-OY-uhH"/>
+                        <viewControllerLayoutGuide type="bottom" id="Yls-HS-ytl"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="TAx-Yv-5tl" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H1t-FQ-rmr">
+                                <rect key="frame" x="164" y="616" width="46" height="31"/>
+                                <state key="normal" title="Retry"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Yls-HS-ytl" firstAttribute="top" secondItem="H1t-FQ-rmr" secondAttribute="bottom" constant="20" id="BWD-xf-8fr"/>
+                            <constraint firstItem="H1t-FQ-rmr" firstAttribute="leading" secondItem="TAx-Yv-5tl" secondAttribute="leadingMargin" constant="148" id="P7F-1X-bSj"/>
+                            <constraint firstItem="H1t-FQ-rmr" firstAttribute="top" secondItem="9sq-OY-uhH" secondAttribute="bottom" constant="596" id="XKP-Hv-xZM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H1t-FQ-rmr" secondAttribute="trailing" constant="149" id="sAv-Be-uky"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b8L-XX-OSc" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.59999999999999" y="42.728635682158924"/>
+        </scene>
+    </scenes>
+</document>
